@@ -5,17 +5,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 10px; /* add some padding for small screens */
+    box-sizing: border-box;
 }
 
 .container {
-    width: 400px;
+    width: 100%;
+    max-width: 400px; /* keeps it small on larger screens */
     background: white;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
     display: none;
+    box-sizing: border-box;
 }
 
 .container.active {
@@ -23,12 +27,14 @@ body {
 }
 
 .logo {
-    width: 140px;
+    width: 40%; /* responsive relative width */
+    max-width: 140px;
     margin-bottom: 20px;
 }
 
 .qr {
-    width: 220px;
+    width: 80%; /* responsive relative width */
+    max-width: 220px;
     margin: 20px auto;
 }
 
@@ -43,13 +49,15 @@ body {
 }
 
 textarea {
-    width: 350px;
+    width: 100%; /* full width of container */
+    max-width: 350px;
     height: 120px;
     margin-top: 15px;
     padding: 10px;
     border-radius: 8px;
     border: 1px solid #ccc;
     resize: none;
+    box-sizing: border-box;
 }
 
 button {
@@ -62,4 +70,22 @@ button {
     font-size: 18px;
     border-radius: 8px;
     cursor: pointer;
+    box-sizing: border-box;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+    .stars span {
+        font-size: 24px;
+    }
+    textarea {
+        height: 100px;
+    }
+    button {
+        font-size: 16px;
+        padding: 12px;
+    }
 }
