@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CUNA Guest Feedback</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Screen 1: QR
+    <div id="screenQR" class="container active">
+        <img src="logo.png" class="logo" />
+        <h2>We Value Your Feedback</h2>
+        <p>Scan the QR code below to share your experience.</p>
+        <img src="qr-sample.png" class="qr" />
+        <button onclick="goToFeedback()">Simulate Scan →</button>
+    </div> -->
+
+    <!-- Screen 2: Feedback -->
+    <div id="screenFeedback" class="container active">
+        <img src="logo.png" class="logo" />
+        <h2>Share Your Feedback</h2>
+        <p>How was your stay?</p>
+
+        <div class="stars" id="stars">
+            <span data-value="1">★</span>
+            <span data-value="2">★</span>
+            <span data-value="3">★</span>
+            <span data-value="4">★</span>
+            <span data-value="5">★</span>
+        </div>
+
+        <textarea id="comment" placeholder="Tell us more about your experience..."></textarea>
+
+        <button onclick="submitFeedback()">Submit Feedback</button>
+    </div>
+
+    <!-- Screen 3: Thank You -->
+    <div id="screenThanks" class="container">
+        <img src="logo.png" class="logo" />
+        <h2>Thank You!</h2>
+        <p>Your feedback helps us improve.</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        emailjs.init("whvA8lA-Ayb5gU1LW"); 
+    </script>
+
+    <!-- Link JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
